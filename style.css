@@ -1,63 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  width: 100%;
-  height : 100vh;
-  background : linear-gradient(#0C1C3E,#394269);
+  height: 100vh;
+  background: linear-gradient(#0c1c3e, #394269);
   overflow: hidden;
 }
 
 #snow {
-  background-color: #FFF;
+  background-color: #fff;
   width: 25px;
   height: 25px;
   opacity: 0;
   border-radius: 50%;
-  animation : snow 3s infinite linear;
+  animation: snow 3s infinite linear;
 }
 
 #snow:nth-of-type(odd) {
   animation-delay: 3s;
   animation-duration: 7s;
-  width : 30px;
-  height : 30px;
-  color : #eee;
+  width: 30px;
+  height: 30px;
+  color: #eee;
 }
 
 #snow:nth-of-type(even) {
   animation-delay: 2s;
   animation-duration: 4s;
-  width : 15px;
-  height : 15px;
+  width: 15px;
+  height: 15px;
 }
 
-#snow:nth-of-type(n+3) {
+#snow:nth-of-type(n + 3) {
   animation-delay: 1s;
-  width : 20px;
-  height : 20px;
+  width: 20px;
+  height: 20px;
 }
-
 
 @keyframes snow {
-  0%{
+  0% {
     transform: translate(-25px, 0vh);
     opacity: 1;
   }
   20% {
-    transform: translate(25px, 20vh) scale(.8);
+    transform: translate(25px, 20vh) scale(0.8);
   }
   40% {
-    transform: translate(-25px, 40vh) scale(.6);
-    opacity: .8;
+    transform: translate(-25px, 40vh) scale(0.6);
+    opacity: 0.8;
   }
   60% {
-    transform: translate(25px, 60vh) scale(.4);
-    opacity: .6;
+    transform: translate(25px, 60vh) scale(0.4);
+    opacity: 0.6;
   }
   80% {
-    transform: translate(-25px, 80vh) scale(.2);
-    opacity: .4;
+    transform: translate(-25px, 80vh) scale(0.2);
+    opacity: 0.4;
   }
   100% {
     transform: translate(25px, 100vh) scale(0);
-    opacity: .2;
+    opacity: 0.2;
   }
 }
