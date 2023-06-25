@@ -1,16 +1,17 @@
-const bodyWidth = document.body.offsetWidth;
+$(function () {
+  const bodyWidth = $("body").width();
 
-function getMargin(a) {
-  return Math.floor(Math.random() * a);
-}
+  function getMargin(a) {
+    return Math.floor(Math.random() * a);
+  }
 
-function makeSnow() {
-  const snow = document.createElement("div");
-  snow.setAttribute("id", "snow");
-  snow.style.marginLeft = `${getMargin(bodyWidth)}px`;
-  document.body.appendChild(snow);
-}
+  function makeSnow() {
+    const snow = $("<div>").attr("id", "snow");
+    snow.css("margin-left", `${getMargin(bodyWidth)}px`);
+    $("body").append(snow);
+  }
 
-for (let i = 0; i < 200; i++) {
-  makeSnow();
-}
+  for (let i = 0; i < 200; i++) {
+    makeSnow();
+  }
+});
